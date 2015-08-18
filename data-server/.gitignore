@@ -12,3 +12,6 @@ transaction-logs
 build
 out
 idea
+
+*.idea
+*.iml
