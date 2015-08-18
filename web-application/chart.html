@@ -6,13 +6,8 @@
     <script src="Chart.js"></script>
 </head>
 <body>
-
-<div ng-app="myApp" ng-controller="formCtrl">
-    <form ng-submit="getCustomers()">
-        <input type="submit" id="submit" value="Fetch data"/>
-    </form>
-    <canvas id="myChart" width="800" height="800"></canvas>
-    <br><br>
+<div ng-app="myApp" ng-controller="formCtrl" ng-init="getCustomers()">
+  <canvas id="myChart" width="800" height="800"></canvas>
 </div>
 </body>
 </html>

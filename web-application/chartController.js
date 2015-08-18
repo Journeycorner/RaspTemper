@@ -6,7 +6,7 @@ app.controller('formCtrl', function ($scope, $http, $filter) {
                 $scope.coordinates = {};
 
                 var data2 = {
-                    labels: [], //["January", "February", "March", "April", "May", "June", "July"];
+                    labels: [],
                     datasets: [
                         {
                             label: "My Second dataset",
@@ -16,13 +16,13 @@ app.controller('formCtrl', function ($scope, $http, $filter) {
                             pointStrokeColor: "#fff",
                             pointHighlightFill: "#fff",
                             pointHighlightStroke: "rgba(151,187,205,1)",
-                            data: [] //[28, 48, 40, 19, 86, 27, 90];
+                            data: []
                         }
                     ]
                 };
 
                 for (var i in data) {
-                    var date = $filter('date')(data[i].timestamp,'HH mm');
+                    var date = $filter('date')(data[i].timestamp,'HH:mm','+0200');
                     data2.labels.push(date);
                     data2.datasets[0].data.push(data[i].temperature);
                 }
