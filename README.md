@@ -6,7 +6,7 @@ Reads temperature data from Raspberry Pi2, pushed it to a server and makes it ac
 2. Install java on your server.
 3. Forward port 8081 to be accessible from outside.
 4. Put the data-server directory on your server and execute it:
-bash```
+```
 sh gradlew run
 ```
 You should now see "[]" in your browser when accessing your server with http://YOUR_SERVER/get from outside.
@@ -22,15 +22,15 @@ It should show an empty chart when accessed from outside.
    * (b) modify subroutine path to match code for your own sensor
 11. Put "sensor-reader/sensor_reader.py" to your Raspberry in a directory accessible for your user
 12. Create a cronjob by executing:
-```bash
+```
 cron -e
 ```
 and adding (for every 15min)
-```bash
+```
 */15 * * * * python3 /home/YOUR_USER/DIR_OF_SCRIPT/sensor_reader.py 2>&1 | logger
 ```
 13. If it works you should see something like this in syslog:
-```bash
+```
 sudo tail -f /var/log/syslog
 Aug 21 12:15:03 raspberrypi kernel: [736607.396576] usb 1-1.3: reset low-speed USB device number 5 using dwc_otg
 Aug 21 12:15:03 raspberrypi kernel: [736607.711202] input: RDing TEMPerV1.2 as /devices/platform/bcm2708_usb/usb1/1-1/1-1.3/1-1.3:1.0/0003:0C45:7401.060E/input/input1548
