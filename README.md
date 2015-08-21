@@ -1,5 +1,5 @@
 # RaspTemper
-Reads temperature data from Raspberry Pi2, pushed it to a server and makes it accessibly by an web application.
+Reads temperature data from Raspberry Pi2, pushes it to a server to make the data available for a web application.
 ## Install
 ### Data Server / Web Application
 1. Clone this project.
